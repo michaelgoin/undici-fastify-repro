@@ -19,6 +19,12 @@ NEW_RELIC_FEATURE_FLAG_UNDICI_ASYNC_TRACKING=false
   * Transactions can get big enough to cause the garbage collector to crash. The default run time is much too low for that.
   * Similarly, each transaction reuse will get logged at warn level which could result in significant logging over a long period of time.
 
+## Installing Dependencies
+
+`npm install` can be ran at the root of the repository.
+
+After the root-level dependencies have been installed, the install scripts for the fastify and express applications will automatically run via the `postinstall` script.
+
 ## Running the reproduction
 
 `npm run start` from repository root supplying a license key (and `NEW_RELIC_HOST` if using non-prod or mocked back-end).

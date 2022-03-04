@@ -9,7 +9,10 @@
     "start-express-hang": "cd ./apps/express && PORT=3002 npm run start-hanging",
     "start-express-3003": "cd ./apps/express && PORT=3003 npm run start",
     "start-express-3004": "cd ./apps/express && PORT=3004 npm run start",
-    "start-traffic": "autocannon -d 60 http://localhost:3001/repro"
+    "start-traffic": "autocannon -d 60 http://localhost:3001/repro",
+    "install-fastify": "cd ./apps/fastify && npm install",
+    "install-express": "cd ./apps/express && npm install",
+    "postinstall": "concurrently npm:install-*"
   },
   "repository": {
     "type": "git",
