@@ -1,0 +1,17 @@
+{
+  "name": "fastify-repro-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NEW_RELIC_FEATURE_FLAG_NEW_PROMISE_TRACKING=true NEW_RELIC_FEATURE_FLAG_UNRESOLVED_PROMISE_CLEANUP=false NEW_RELIC_FEATURE_FLAG_UNDICI_INSTRUMENTATION=true NEW_RELIC_FEATURE_FLAG_UNDICI_ASYNC_TRACKING=false node -r newrelic .",
+    "no-undici": "NEW_RELIC_FEATURE_FLAG_NEW_PROMISE_TRACKING=true NEW_RELIC_FEATURE_FLAG_UNRESOLVED_PROMISE_CLEANUP=false node -r newrelic ."
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "fastify": "^3.27.2",
+    "newrelic": "^8.8.0",
+    "undici": "^4.15.0"
+  }
+}

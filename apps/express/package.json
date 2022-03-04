@@ -1,0 +1,16 @@
+{
+  "name": "express-repro-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r newrelic .",
+    "start-hanging": "HANG=1 node -r newrelic ."
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.17.3",
+    "newrelic": "^8.8.0"
+  }
+}
